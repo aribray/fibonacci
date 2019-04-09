@@ -8,5 +8,11 @@
 # Time complexity: ?
 # Space complexity: ?
 def fibonacci(n)
-  raise NotImplementedError
+  if n == nil || n < 0
+    raise ArgumentError, "This number is not valid."
+  elsif n == 0 || n == 1
+    return n
+  else 
+    return fibonacci(n-1) + fibonacci(n-2)
+  end
 end
